@@ -41,3 +41,16 @@ void display() {								// Prosedur untuk menampilkan hasil
 			cout << endl;						// Output baris kosong 
 }
 
+void bubbleSortArray() {							//Prosedur untuk mengurutkan array dengan metode bubble sort 
+	int pass = 1;									//Stop 1 
+
+	for (pass; pass <= n - 1; pass++) { 			//Looping dengan 1 dimulai dari 1 hingga n-1 
+		for (int j = 0; j <= n - 1 - pass; j++) {	// Looping dengan j dimulai dari 0 hingga n-1 
+			if (a[j] > a[j + 1]) {					// Jika nilai pada a[j] lebih besar dari 0 hingga n-1 
+				int temp = a[j];					//Simpan nilai a[j] ke variable sementara temp 
+				a[j] = a[j + 1];					//Assign nilai a [j+1] ke a[j] 
+				a[j + 1] = temp;					// Assign nilai temp 
+			}
+		}
+	}
+} 
